@@ -1,0 +1,69 @@
+# ------------------------- #
+# Don't Remove Credit 
+# Owner @Mr_Mohammed_29
+# ------------------------- #
+
+services:
+
+  - type: web
+
+    name: au-luffy-movie-bot
+
+    env: docker
+
+    autoDeploy: true
+
+
+    envVars:
+
+      - key: API_ID
+        sync: false
+
+
+      - key: API_HASH
+        sync: false
+
+
+      - key: BOT_TOKEN
+        sync: false
+
+
+      - key: MONGO_URI
+        sync: false
+
+
+      - key: OMDB_API_KEY
+        sync: false
+
+
+      - key: OWNER_ID
+        value: "7284759394"
+
+
+      - key: BOT_USERNAME
+        value: "AU_LuffyFilters_bot"
+
+
+      - key: DATABASE_CHANNEL_ID
+        value: "-1002722342948"
+
+
+      - key: UPDATES_CHANNEL
+        value: "Anime_UpdatesAU"
+
+
+      - key: SUPPORT_GROUP
+        value: "AU_Bot_Discussion"
+
+
+      - key: FORCE_SUB
+        value: "Anime_UpdatesAU"
+
+
+      - key: START_PIC
+        sync: false
+
+# ------------------------- #
+# Don't Remove Credit 
+# Owner @Mr_Mohammed_29
+# ------------------------- #
