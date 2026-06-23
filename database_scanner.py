@@ -3,11 +3,12 @@ import asyncio
 
 from pyrogram import Client
 
+
 from config import (
     API_ID,
     API_HASH,
     BOT_TOKEN,
-    DATABASE_CHANNEL_ID
+    DATABASE_CHANNEL
 )
 
 from database import save_movie
@@ -23,9 +24,8 @@ scanner = Client(
 
 async def scan_database():
 
-    # Fix peer error
     chat = await scanner.get_chat(
-        DATABASE_CHANNEL_ID
+        DATABASE_CHANNEL
     )
 
     print(
