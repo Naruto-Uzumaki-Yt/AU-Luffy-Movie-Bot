@@ -48,6 +48,7 @@ DATABASE_CHANNEL_ID = int(
     )
 )
 
+DATABASE_CHANNEL = "Database"
 
 UPDATES_CHANNEL = os.getenv(
     "UPDATES_CHANNEL",
