@@ -1,0 +1,23 @@
+# ------------------------- #
+# Don't Remove Credit 
+# Owner @Mr_Mohammed_29
+# ------------------------- #
+
+
+pyrogram==2.0.106
+tgcrypto==1.2.5
+
+motor==3.7.1
+pymongo==4.13.2
+
+aiohttp==3.12.15
+
+flask==3.1.1
+
+python-dotenv==1.1.1
+uvloop==0.21.0
+
+# ------------------------- #
+# Don't Remove Credit 
+# Owner @Mr_Mohammed_29
+# ------------------------- #
