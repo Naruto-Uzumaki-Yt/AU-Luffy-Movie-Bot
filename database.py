@@ -86,14 +86,13 @@ async def save_movie(
     )
 
 
-async def search_movies(
-    query
-):
+async def search_movies(query):
 
     cursor = movies_col.find(
         {
-            "$text": {
-                "$search": query
+            "file_name": {
+                "$regex": query,
+                "$options": "i"
             }
         }
     ).limit(50)
@@ -102,11 +101,9 @@ async def search_movies(
     results = []
 
     async for item in cursor:
-
         results.append(item)
 
     return results
-
 
 
 async def get_movie(
