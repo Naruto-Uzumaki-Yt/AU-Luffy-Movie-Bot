@@ -21,7 +21,7 @@ RUN pip install -r requirements.txt
 COPY . .
 
 
-CMD ["python","database_scanner.py"]
+CMD ["python","bot.py"]
 
 # ------------------------- #
 # Don't Remove Credit 
