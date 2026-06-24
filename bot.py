@@ -1,9 +1,8 @@
+
 # ------------------------- #
 # Don't Remove Credit 
 # Owner @Mr_Mohammed_29
 # ------------------------- #
-
-import asyncio
 
 from pyrogram import Client, idle
 
@@ -39,6 +38,7 @@ async def load_plugins():
     import auto_indexer
 
 
+
 # ---------------- MAIN ---------------- #
 
 async def main():
@@ -56,27 +56,28 @@ async def main():
     print(
         "━━━━━━━━━━━━━━━━━━"
     )
+
     print(
         "🤖 AU Luffy Filters Started"
     )
+
     print(
         f"Username: @{me.username}"
     )
+
     print(
         "━━━━━━━━━━━━━━━━━━"
     )
 
-    await idle()
 
-    await bot.stop()
+    await idle()
 
 
 
 if __name__ == "__main__":
 
-    asyncio.run(
-        main()
-    )
+    bot.run(main())
+
 
 # ------------------------- #
 # Don't Remove Credit 
