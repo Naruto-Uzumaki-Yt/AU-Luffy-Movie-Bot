@@ -110,8 +110,30 @@ async def start_cmd(
     )
 
 
-    if START_PIC:
+    # START ANIMATION
 
+    m = await message.reply_text(
+        "🔄 Starting..."
+    )
+
+    animations = [
+        "🔄 Starting @AU_LuffyFilters_bot..",
+        "⚡ Sun God Nika...",
+        "🎬 Monkey D Luffy..",
+        "💀 One Piece"
+    ]
+
+
+    for i in animations:
+        await m.edit_text(i)
+        await asyncio.sleep(0.8)
+
+
+    await m.delete()
+
+
+
+    if START_PIC:
 
         await message.reply_photo(
             photo=START_PIC,
@@ -119,9 +141,7 @@ async def start_cmd(
             reply_markup=buttons
         )
 
-
     else:
-
 
         await message.reply_text(
             text,
