@@ -24,10 +24,8 @@ async def scan_database():
 
     print("Checking private database channel...")
 
-
-    # Force Pyrogram to load peer
-    await scanner.get_dialogs()
-
+    async for _ in scanner.get_dialogs():
+        break
 
     chat = await scanner.get_chat(
         DATABASE_CHANNEL_ID
