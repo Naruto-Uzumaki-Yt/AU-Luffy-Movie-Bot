@@ -1,4 +1,5 @@
 import asyncio
+import os
 from pyrogram import Client
 from config import (
     API_ID,
@@ -12,7 +13,8 @@ from database import save_movie
 scanner = Client(
     "database_scanner",
     api_id=API_ID,
-    api_hash=API_HASH
+    api_hash=API_HASH,
+    phone_number=os.getenv("PHONE_NUMBER")
 )
 
 async def scan_database():
