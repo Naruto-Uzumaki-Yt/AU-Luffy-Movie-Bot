@@ -1,7 +1,5 @@
 import asyncio
-
 from pyrogram import Client
-
 from config import (
     API_ID,
     API_HASH,
@@ -11,7 +9,6 @@ from config import (
 
 from database import save_movie
 
-
 scanner = Client(
     "database_scanner",
     api_id=API_ID,
@@ -19,23 +16,17 @@ scanner = Client(
     bot_token=BOT_TOKEN
 )
 
-
 async def scan_database():
 
-    print("Checking private database channel...")
+    print("Starting scan...")
 
-    async for _ in scanner.get_dialogs():
-        break
 
     chat = await scanner.get_chat(
         DATABASE_CHANNEL_ID
     )
-
-
     print(
         f"Scanning: {chat.title}"
     )
-
 
     total = 0
 
@@ -97,7 +88,7 @@ async def scan_database():
         except Exception as e:
 
             print(
-                f"Skip Error: {e}"
+                e
             )
 
 
