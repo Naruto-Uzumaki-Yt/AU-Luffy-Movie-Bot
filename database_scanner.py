@@ -1,14 +1,12 @@
-
 import asyncio
 
 from pyrogram import Client
-
 
 from config import (
     API_ID,
     API_HASH,
     BOT_TOKEN,
-    DATABASE_CHANNEL
+    DATABASE_CHANNEL_ID
 )
 
 from database import save_movie
@@ -24,9 +22,17 @@ scanner = Client(
 
 async def scan_database():
 
+    print("Checking private database channel...")
+
+
+    # Force Pyrogram to load peer
+    await scanner.get_dialogs()
+
+
     chat = await scanner.get_chat(
-        DATABASE_CHANNEL
+        DATABASE_CHANNEL_ID
     )
+
 
     print(
         f"Scanning: {chat.title}"
@@ -37,7 +43,7 @@ async def scan_database():
 
 
     async for message in scanner.get_chat_history(
-        chat.id
+        DATABASE_CHANNEL_ID
     ):
 
         try:
@@ -92,13 +98,15 @@ async def scan_database():
 
         except Exception as e:
 
-            print(e)
-
+            print(
+                f"Skip Error: {e}"
+            )
 
 
     print(
         f"Completed: {total}"
     )
+
 
 
 async def main():
