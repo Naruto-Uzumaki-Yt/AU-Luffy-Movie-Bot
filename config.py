@@ -44,7 +44,7 @@ OWNER_ID = int(
 DATABASE_CHANNEL_ID = int(
     os.getenv(
         "DATABASE_CHANNEL_ID",
-        "-1002722342948"
+        "-1004391658489"
     )
 )
 
