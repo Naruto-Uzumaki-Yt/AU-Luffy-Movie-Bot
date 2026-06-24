@@ -12,8 +12,7 @@ from database import save_movie
 scanner = Client(
     "database_scanner",
     api_id=API_ID,
-    api_hash=API_HASH,
-    bot_token=BOT_TOKEN
+    api_hash=API_HASH
 )
 
 async def scan_database():
