@@ -4,6 +4,7 @@
 # Owner @Mr_Mohammed_29
 # ------------------------- #
 
+import asyncio
 from pyrogram import Client, idle
 
 from config import (
