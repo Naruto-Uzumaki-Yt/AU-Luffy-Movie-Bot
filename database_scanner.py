@@ -110,10 +110,7 @@ async def main():
 
     await scan_database()
 
-    await scanner.stop()
-
-
 
 if __name__ == "__main__":
 
-    asyncio.run(main())
+    scanner.run(main())
