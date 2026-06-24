@@ -21,9 +21,15 @@ async def scan_database():
     print("Starting scan...")
 
 
-    chat = await scanner.get_chat(
-        DATABASE_CHANNEL_ID
-    )
+    try:
+        chat = await scanner.get_chat(
+            int(DATABASE_CHANNEL_ID)
+        )
+
+    except Exception as e:
+        print("CHANNEL ERROR:", e)
+        return
+        
     print(
         f"Scanning: {chat.title}"
     )
